@@ -1,0 +1,76 @@
+export JAVA_HOME=`/usr/libexec/java_home -v '1.7*'`
+export PATH=$PATH:$JAVA_HOME/bin
+
+export NEO4J_HOME=/usr/local/neo4j-community-2.2.4
+
+export NODE_PATH=/usr/local/lib/node_modules
+export PATH=$PATH:/usr/local/opt/ruby/bin
+export PATH=$PATH:/usr/local/share/npm/bin
+
+export PATH=$PATH:~/bin
+export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
+
+alias ls='ls -F'
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+export PS1='\h:\w>'
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+#
+#
+export GRAILS_HOME=/Users/srajan/grails/ggts/grails-2.1.1
+export CATALINA_HOME=/usr/local/tomcat
+export PATH=$PATH:$GRAILS_HOME/bin
+export PATH=$PATH:/Applications/ccollab_client
+export PATH=$PATH:/Library/Gradle/Home/bin
+export PATH=$PATH:/Users/srajan/phantomjs/bin
+export PATH=$PATH:/usr/local/scala/bin
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+##
+# Your previous /Users/srajan/.bash_profile file was backed up as /Users/srajan/.bash_profile.macports-saved_2013-06-22_at_01:20:55
+##
+
+# MacPorts Installer addition on 2013-06-22_at_01:20:55: adding an appropriate PATH variable for use with MacPorts.
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+##
+# Cool perl conversion from dos2unix
+##
+alias pdos2unix="perl -pi -e 's/\r\n|\n|\r/\n/g'"
+
+alias apache2_start="sudo apachectl start"
+alias apache2_stop="sudo apachectl stop"
+alias apache2_restart="sudo apachectl restart"
+alias refresh_branch="source refresh_branch.env"
+# Keep this at the end!!
+alias qbo="source ~/bin/p4.env; source ~/dev/qbo/trunk/src/build/bin/qbo.env;"
+
+
+# Code coverage stuff
+export ANT_HOME="/usr/local/apache-ant-1.9.6"
+export SONAR_RUNNER_HOME="/usr/local/sonar-runner-2.4"
+export PATH=/usr/local/bin:$SONAR_RUNNER_HOME/bin:$ANT_HOME/bin:$PATH
+
+# Docker stuff
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/srajan/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+alias dockerroute="sudo route -nv add -net 192.168.59 -interface vboxnet0"
+
+# For Yosemite have this in bash_profile as well
+ulimit -n 65536
+ulimit -u 2048
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+
+# Chef stuff
+eval "$(chef shell-init bash)"
+
+#Neo4j path stuff
+export PATH=$PATH:/usr/local/neo4j-community-2.2.4/bin
